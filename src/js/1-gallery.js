@@ -64,6 +64,9 @@ const images = [
   },
 ];
 
+import SimpleLightbox from "simplelightbox";
+//import SimpleLightbox from "/node_modules/simplelightbox/src/simple-lightbox.js";
+
 const galleryEl = document.querySelector("ul.gallery");
 const fragment = document.createDocumentFragment();
 
@@ -98,25 +101,53 @@ images.forEach(function callback(items) {
 
 galleryEl.appendChild(fragment);
 
-const largeEl = document.querySelector("ul.gallery");
-largeEl.addEventListener("click", selectImage);
-function selectImage(event) {
- const openBigImg = event.target.dataset.source;
-   if (!openBigImg) {
-    return;
-  }
-console.log(openBigImg);
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionPosition: 'bottom',
+  captionDelay: 250,
+  captionsData: 'alt',
+});
 
-const instance = basicLightbox.create(`
+
+
+//import SimpleLightbox from (simplelightbox / dist / simple - lightbox.esm);
+//import SimpleLightbox from (simplelightbox / dist / simple - lightbox.min.css);
+
+// let gallery = new SimpleLightbox('.galleryEl');
+// gallery.on('show.simplelightbox', function selectImage(event) {
+// 	const openBigImg = event.target.dataset.source;
+// if (!openBigImg) {
+//    return;
+//    }
+//   console.log(openBigImg); //do something…
+  
+  
+//   <div class="modal">
+//     <img
+//     src="${openBigImg}"
+//    />
+//    </div>
  
-<div class="modal">
-    <img
-      src="${openBigImg}"
-    />
-  </div>
-`) 
-instance.show();
+//   show.simplelightbox;
+  
+// });
 
-}
+// const largeEl = document.querySelector("ul.gallery");
+// largeEl.addEventListener("click", selectImage);
+// function selectImage(event) {
+//  const openBigImg = event.target.dataset.source;
+//    if (!openBigImg) {
+//     return;
+//   }
+// console.log(openBigImg);
 
+// const instance = basicLightbox.create(`
+ 
+// <div class="modal">
+//     <img
+//       src="${openBigImg}"
+//     />
+//   </div>
+// `) 
+// instance.show();
 
+// }

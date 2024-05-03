@@ -1,25 +1,42 @@
-<div class="backdrope">
-  <div class="modal">
-    <form class="feedback-form" autocomplete="off">
-      <div class="container-email">
-        <label class="email-input">
-          Email
-          <input class="place-input" type="email" name="email" autofocus />
-        </label>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework09 task2 form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="backdrope">
+      <div class="modal">
+        <form class="feedback-form" autocomplete="off">
+          <div class="container-email">
+            <label class="email-input">
+              Email
+              <input
+                class="place-input"
+                type="email"
+                name="email"
+                autofocus
+                placeholder="Type area"
+              />
+            </label>
+          </div>
+          <div class="container-massage">
+            <label class="message-input">
+              Message
+              <textarea
+                class="massage-input-text"
+                name="message"
+                rows="8"
+              ></textarea>
+            </label>
+          </div>
+          <div class="container-button">
+            <button class="text-btn" type="submit">Submit</button>
+          </div>
+        </form>
       </div>
-      <div class="container-massage">
-        <label class="message-input">
-          Message
-          <textarea
-            class="massage-input-text"
-            name="message"
-            rows="8"
-          ></textarea>
-        </label>
-      </div>
-      <div class="container-button">
-        <button class="text-btn" type="submit">Submit</button>
-      </div>
-    </form>
-  </div>
-</div>
+    </div>
+  </body>
+</html>

@@ -88,6 +88,14 @@ body {
 
 /************************form**********************************/
 
+.modal {
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 296px;
+  background: #fff;
+}
+
 .feedback-form {
   display: flex;
   flex-direction: column;

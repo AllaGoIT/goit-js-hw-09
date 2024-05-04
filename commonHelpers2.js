@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-3cfb730f.js";/* empty css                      */const t={email:document.querySelector(".place-input"),message:document.querySelector(".massage-input-text")};t.message.addEventListener("input",a);t.email.addEventListener("input",a);function a(e){e.preventDefault(),e.target.value.toLowerCase(),localStorage.setItem("feedback-form-state",e.target.value)}
+//# sourceMappingURL=commonHelpers2.js.map

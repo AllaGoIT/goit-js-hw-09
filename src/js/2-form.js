@@ -3,11 +3,11 @@ const formData = {
     message: document.querySelector('.massage-input-text'),
 }
 const { email, message } = formData;
-console.log(email);
-console.log(message);
+//console.log(email);
+//console.log(message);
 
-formData.message.addEventListener('input', _.throttle(onTextareaInput, 300));
-formData.email.addEventListener('input', _.throttle(onTextareaInput, 300));
+formData.message.addEventListener('input', onTextareaInput);
+formData.email.addEventListener('input', onTextareaInput);
 
 function onTextareaInput(event) {
 event.preventDefault();
@@ -16,24 +16,25 @@ event.target.value.toLowerCase();
 }
 
 
+
 function fillTextareaField() {
-  // const messageText = localStorage.getItem('feedback-msg'); // not bad, but...
     const messageText = localStorage.getItem(feedback - form - state);
     formData.message.value = messageText;
-  // console.log(messageText);
-    if (!messageText) {
-      console.log(`Fill please all fields`);
+  //console.log(messageText);
+  if (!messageText) {
+    const result = `Fill please all fields`;
+    console.log(result);
   }
   
 }
 
 function fillEmailField() {
-  // const messageText = localStorage.getItem('feedback-msg'); // not bad, but...
     const emailText = localStorage.getItem(feedback - form - state);
     formData.email.value = emailText;
-  // console.log(messageText);
-    if (!emailText) {
-      console.log(`Fill please all fields`);
+  //console.log(emailText);
+  if (!emailText) {
+    const result = `Fill please all fields`;
+    console.log(result);
     }
      else {
        console.log(formData);

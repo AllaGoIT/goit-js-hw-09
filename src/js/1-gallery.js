@@ -65,7 +65,7 @@ const images = [
 ];
 
 import SimpleLightbox from "simplelightbox";
-//import SimpleLightbox from "/node_modules/simplelightbox/src/simple-lightbox.js";
+
 
 const galleryEl = document.querySelector("ul.gallery");
 const fragment = document.createDocumentFragment();
@@ -80,10 +80,7 @@ images.forEach(function callback(items) {
   const a = document.createElement("a");
   a.classList.add("gallery-link");
   a.href = items.original;
-  a.addEventListener("click", function handleOff(event) {
-    event.preventDefault();
-  });
-  
+
   
   const img = document.createElement("img");
   img.classList.add("gallery-image");
@@ -109,45 +106,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
 
 
 
-//import SimpleLightbox from (simplelightbox / dist / simple - lightbox.esm);
-//import SimpleLightbox from (simplelightbox / dist / simple - lightbox.min.css);
-
-// let gallery = new SimpleLightbox('.galleryEl');
-// gallery.on('show.simplelightbox', function selectImage(event) {
-// 	const openBigImg = event.target.dataset.source;
-// if (!openBigImg) {
-//    return;
-//    }
-//   console.log(openBigImg); //do something…
-  
-  
-//   <div class="modal">
-//     <img
-//     src="${openBigImg}"
-//    />
-//    </div>
- 
-//   show.simplelightbox;
-  
-// });
-
-// const largeEl = document.querySelector("ul.gallery");
-// largeEl.addEventListener("click", selectImage);
-// function selectImage(event) {
-//  const openBigImg = event.target.dataset.source;
-//    if (!openBigImg) {
-//     return;
-//   }
-// console.log(openBigImg);
-
-// const instance = basicLightbox.create(`
- 
-// <div class="modal">
-//     <img
-//       src="${openBigImg}"
-//     />
-//   </div>
-// `) 
-// instance.show();
-
-// }

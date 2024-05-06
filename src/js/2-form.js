@@ -30,10 +30,10 @@ function onSubmit(event) {
     console.log(formData);
   }
   else {
-    console.log(`Fill please all fields`);
+    alert(`Fill please all fields`);
   }
   dataEl.reset();
-  localStorage.removeItem("feedback-form-state");
+  //localStorage.removeItem("feedback-form-state");
   formData.email = "";
   formData.message = "";
 }

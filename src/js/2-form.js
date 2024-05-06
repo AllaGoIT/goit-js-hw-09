@@ -12,7 +12,6 @@ dataEl.addEventListener("submit", onSubmit);
 fillFields();
 
 function onInput(event) {
-  //event.preventDefault(); 
   const inputValue = event.target.value.trim();
 
   if (event.target === dataEl.elements.email) {
@@ -31,6 +30,7 @@ function onSubmit(event) {
     //localStorage.setItem("feedback-form-state", JSON.stringify(formData));
     
     console.log(formData);
+    localStorage.removeItem("feedback-form-state");
     dataEl.reset();
     formData.email = "";
     formData.message = "";

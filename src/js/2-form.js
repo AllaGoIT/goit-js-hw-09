@@ -21,6 +21,7 @@ function onInput(event) {
   }
   else {
     formData.message = inputValue;
+    localStorage.setItem("feedback-form-state", JSON.stringify(formData));
   }
 }
 

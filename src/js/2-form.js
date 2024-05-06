@@ -12,11 +12,12 @@ dataEl.addEventListener("submit", onSubmit);
 fillFields();
 
 function onInput(event) {
-  event.preventDefault(); 
+  //event.preventDefault(); 
   const inputValue = event.target.value.trim();
 
   if (event.target === dataEl.elements.email) {
     formData.email = inputValue;
+    localStorage.setItem("feedback-form-state", JSON.stringify(formData));
   }
   else {
     formData.message = inputValue;
@@ -26,16 +27,20 @@ function onInput(event) {
 function onSubmit(event) {
   event.preventDefault();
   if (formData.email && formData.message) {
-    localStorage.setItem("feedback-form-state", JSON.stringify(formData));
+    //localStorage.setItem("feedback-form-state", JSON.stringify(formData));
+    
     console.log(formData);
+    dataEl.reset();
+    formData.email = "";
+    formData.message = "";
   }
   else {
     alert(`Fill please all fields`);
   }
-  dataEl.reset();
+  //dataEl.reset();
   //localStorage.removeItem("feedback-form-state");
-  formData.email = "";
-  formData.message = "";
+  //formData.email = "";
+  //formData.message = "";
 }
 
 function fillFields() {
